@@ -3,37 +3,56 @@
 <head>
    <meta charset="UTF-8">
    <title>Creative Arts Council</title>
-   <link rel="stylesheet" href="static/css/bumble-bee.css">
+   <link rel="stylesheet" href="static/css/root.css">
+   <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+   <link rel="stylesheet" href="static/css/bumble-bee.min.css">
    <link rel="stylesheet" href="static/css/cac.css">
 </head>
 <body class="fp">
 <!--The container for errthing-->
 <div class="global-host fp">
-   <div class="banner-head fph h70">
+   <div class="banner-head fph h90 bg-clr2">
       <!--Logo-->
       <div class="fpv fph2 fl">
-         <img src="#" alt="Creative Arts Council Logo">
+         <a href="index.html">
+            <img src="static/images/cac-official-logo.png" class="fpv" alt="Creative Arts Council Logo">
+         </a>
       </div>
       <!--Description-->
-      <div class="fpv fph8 bld5 pd20">Committed to Championing and developing Ghana's Creative industries</div>
+      <div class="fpv fph8 bld5 pd25 fts24">Committed to Championing and developing Ghana's Creative industries</div>
    </div>
-   <div class="fph h60 rltv">
-      <!--The div belove is used to create the green-red color graduation-->
+   <!-- nav bar 1-->
+
+   <div class="fph h60 rltv zi60">
+      <!--The div below is used to create the green-red color graduation-->
       <div class="abs fp zi1">
          <div class="fpv fph3 wine-bg-clr fl"></div>
          <div class="fpv fph7 green-bg-clr fr"></div>
       </div>
+      <!--Main Nav Bar-->
       <div class="abs fp zi2">
-         <!-- nav bar 1-->
          <nav class="fp main-nav">
             <ul class="fp">
-               <li class="fl fpv w14p"><a href="#" class="fp">About Us</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p">Initiatives</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p">Artistic Fields</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p">Programs</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p">Events</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p">Contact Us</a></li>
-               <li class="fl fpv w14p"><a href="#" class="fpw14p"><i class="fa fa-search"></i></a></li>
+               <li class="fl fpv w12p "><a class="fp">About Us</a>
+                  <ul class="ha wa blk tri-t-ctr">
+                     <li class="h40"><a href="mission.html" class="fp blk pdlr15">Our Mission</a></li>
+                     <li class="h40"><a href="#" class="fp blk pdlr15">Our Strategy</a></li>
+                     <li class="h40"><a href="#" class="fp blk pdlr15">Council Members</a></li>
+                  </ul>
+               </li>
+               <li class="fl fpv w12p"><a href="#" class="fp ">Initiatives</a></li>
+               <li class="fl fpv w12p"><a href="#" class="fp ">Artistic Fields</a></li>
+               <li class="fl fpv w12p"><a href="#" class="fp ">Programs</a></li>
+               <li class="fl fpv w12p"><a href="#" class="fpw14p">Events</a>
+                  <ul class="ha wa blk tri-t-ctr">
+                     <li class="h40"><a href="#" class="fp blk pdlr15">Art Fair</a></li>
+                     <li class="h40"><a href="#" class="fp blk pdlr15">Event Calendar</a></li>
+                     <li class="h40"><a href="#" class="fp blk pdlr15">The Arts Warehouse</a></li>
+                  </ul>
+               </li>
+               <li class="fl fpv w12p"><a href="#" class="fp ">News</a></li>
+               <li class="fl fpv w12p"><a href="#" class="fp ">Contact Us</a></li>
+               <li class="fl fpv w12p"><a href="#" class="fp "><i class="fa fa-search"></i></a></li>
             </ul>
          </nav>
       </div>
@@ -42,7 +61,7 @@
       &lt;!&ndash; nav bar 2&ndash;&gt;
       <nav class="fp">
          <ul class="fp">
-            <li class="fl fpv w10p"><a href="#" class="fp pd5 blk">About Us</a></li>
+            <li class="fl fpv w12pw10p"><a href="#" class="fp pd5 blk">About Us</a></li>
             <li class="fl fpv w10p"><a href="#" class="fp pd5 blk">Initiatives</a></li>
             <li class="fl fpv w10p"><a href="#" class="fp pd5 blk">Artistic Fields</a></li>
          </ul>
@@ -50,15 +69,25 @@
    </div>-->
 
    <!--Carousel Slider Begins here-->
-   <div class="fph fpv-120 gray-bg-clr rltv">
+   <section class="fph fpv-150 gray-bg-clr rltv">
       <!---->
       <div class="carousel-static-bg fp abs zi1">
-         <img src="static/images/backdrop-option.png" class="fp" alt="Main Page Frame">
+         <img src="static/images/backdrop-option-new.png" class="fp" alt="Main Page Frame">
       </div>
-      <div class="carousel-container fpv fph70 ctr-h zi2">
-         <img src="static/images/MainPageFrame.png" class="fp" alt="Main Page Frame">
+      <div class="carousel-static-tint fp abs zi2"></div>
+      <div class="carousel-container fp ctr-h zi3 oh rltv">
+         <div class="carousel fp">
+            <!---->
+            <div class="fp carousel-slide">
+               <img src="static/images/CAC-OFFICIAL.png" class="fpv ctr-hv" alt="Main Page Frame">
+            </div>
+            <!--Nana's slide-->
+            <!--<div class="fp carousel-slide">-->
+               <!--<img src="static/images/FullSizeRender.jpg" class="fpv ctr-hv" alt="Main Page Frame">-->
+            <!--</div>-->
+         </div>
       </div>
-   </div>
+   </section>
 
    <!--End of Global Host-->
 </div>

@@ -4,10 +4,10 @@
 :root
 {--normalBgColor: #fff;--menuItemHoverColor: #efefef;--menuTextColor: #393f4c;--useInfoTextColor: #000;--checkBoxBg: rgba(58, 58, 58, 0.39);--checkBoxCheckBg: #ccc;--checkGreen: #04ec1f;--dividerColor: #d7e0e0;--shortCutColor: #888f8e;--subMenuShadowColor: rgba(0, 0, 0, 0.63);
 
+  --tri-clr : rgba(0, 0, 0, .7);
 
   --chekkit-green: #74e79d;
   --chekkit-green-2: #60c953;
-
   --chekkit-blue: #52d9dd;
   --chekkit-gradient: linear-gradient(130deg, #74e79d 0%, #52d9dd 100%);
 }
@@ -18,9 +18,9 @@
 .disabledText, label.disabledText
 {color: var(--disabledFg) !important;text-shadow: var(--disabledTextShadow) !important;}
 
-
-
-html, body{
-overflow-y:auto !important;
+html, body
+{
+  overflow-y: auto !important;
 }
+
 //}

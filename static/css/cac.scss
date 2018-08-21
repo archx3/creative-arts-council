@@ -4,12 +4,14 @@ $gray: #a29f9f;
 
 $cac: 'cac';
 
-$clrs  : ('wine' : $wine, 'green' : $green, 'gray' : $gray );
+$clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
 
-@each $color-class, $color in $clrs{
+@each $color-class, $color in $clrs
+{
   .#{$color-class}
   {
-    &-clr{
+    &-clr
+    {
       color: #{$color};
     }
     &-bg-clr
@@ -23,15 +25,135 @@ $clrs  : ('wine' : $wine, 'green' : $green, 'gray' : $gray );
   }
 }
 
-.main-nav{
-  a{
+@mixin main-nav-activate
+{
+  color: #000;
+  text-shadow: 0 0 4px rgba(255, 255, 255, .9);
+}
+
+.main-nav
+{
+  a
+  {
     display: block;
     padding-top: 20px;
     padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: 600;
-
     color: #fff;
     text-align: center;
-
   }
+
+  ul
+  {
+    li
+    { position: relative;
+      &.active
+      {
+        & > a
+        {
+          @include main-nav-activate
+        }
+      }
+      &:hover
+      {
+        & > a
+        {
+          @include main-nav-activate
+        }
+        & > ul
+         {
+           display: block;
+         }
+      }
+      ul
+      {
+        display: none;
+        position: absolute;
+        left: 5px;
+        top: 60px;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: 50;
+        min-width: 200px;
+
+        li
+        {
+          width: auto;
+
+          a
+          {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.carousel-static-tint
+{
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.sec-nav
+{
+  background-color: transparentize($gray, .2);
+  li
+  {
+    a
+    {
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+
+      &:hover
+      {
+        color: $wine;
+      }
+    }
+    &.active
+    {
+      a
+      {
+        color: $wine;
+      }
+    }
+  }
+}
+
+.text-board
+{
+  h4
+  {
+    color: $wine;
+  }
+  p
+  {
+    color: $green;
+  }
+
+  &.h-stripe
+  {
+    &::before, &::after
+    {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 21px);
+      background-color: $green;
+      height: 2px;
+      width: 10%;
+    }
+    &::after
+    {
+      left: unset;
+      right: 0;
+    }
+  }
+
 }

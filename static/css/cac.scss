@@ -1,0 +1,37 @@
+$wine: #b20101;
+$green: #367d61;
+$gray: #a29f9f;
+
+$cac: 'cac';
+
+$clrs  : ('wine' : $wine, 'green' : $green, 'gray' : $gray );
+
+@each $color-class, $color in $clrs{
+  .#{$color-class}
+  {
+    &-clr{
+      color: #{$color};
+    }
+    &-bg-clr
+    {
+      background-color: #{$color};
+    }
+    &-bd-clr
+    {
+      border-color: #{$color};
+    }
+  }
+}
+
+.main-nav{
+  a{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-weight: 600;
+
+    color: #fff;
+    text-align: center;
+
+  }
+}

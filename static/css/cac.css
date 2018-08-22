@@ -84,4 +84,32 @@
   left: unset;
   right: 0; }
 
+.news-items .news-item {
+  overflow: hidden; }
+  .news-items .news-item .news-story {
+    max-height: 150px;
+    position: relative; }
+    .news-items .news-item .news-story .news-date {
+      color: #a29f9f;
+      position: absolute;
+      font-weight: 500;
+      left: 20px;
+      bottom: 0;
+      z-index: 4; }
+    .news-items .news-item .news-story::before {
+      content: 'More... ';
+      text-align: right;
+      color: #000;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-right: 20px;
+      display: block;
+      z-index: 3;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 30%;
+      width: 100%;
+      background-color: #fff; }
+
 /*# sourceMappingURL=cac.css.map */

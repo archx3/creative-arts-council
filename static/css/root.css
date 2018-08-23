@@ -48,7 +48,8 @@
   --chekkit-green: #74e79d;
   --chekkit-green-2: #60c953;
   --chekkit-blue: #52d9dd;
-  --chekkit-gradient: linear-gradient(130deg, #74e79d 0%, #52d9dd 100%); }
+  --chekkit-gradient: linear-gradient(130deg, #74e79d 0%, #52d9dd 100%);
+  height: auto; }
 
 .disabled, a[class="disabled"] {
   background-color: var(--disabledBg) !important;

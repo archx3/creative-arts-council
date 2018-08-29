@@ -2,6 +2,18 @@ $wine: #b20101;
 $green: #367d61;
 $gray: #a29f9f;
 
+:root
+{
+  --green: #367d61;
+  --gray: #a29f9f;
+  --wine: #b20101;
+}
+
+html, body
+{
+  font-family: Serif, serif;
+}
+
 $cac: 'cac';
 
 $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
@@ -75,7 +87,7 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
         top: 60px;
         background-color: rgba(0, 0, 0, .7);
         z-index: 50;
-        min-width: 200px;
+        min-width: 230px;
 
         li
         {
@@ -129,11 +141,11 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
 {
   h4
   {
-    color: $wine;
+    //color: $wine;
   }
   p
   {
-    color: $green;
+    //color: $green;
   }
 
   &.h-stripe
@@ -145,7 +157,8 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
       position: absolute;
       left: 0;
       top: calc(50% - 21px);
-      background-color: $green;
+      //background-color: $green;
+      background-color: #000;
       height: 2px;
       width: 10%;
     }
@@ -160,6 +173,38 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
 
 .news-items
 {
+
+  .event
+  {
+    &-story
+    {
+      .brief
+      {
+        max-height: 100px;
+        overflow: hidden;
+        position: relative;
+        &::before
+        {
+          content: '';
+          text-align: right;
+          display: block;
+          z-index: 3;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 50%;
+          width: 100%;
+          background-color: #fff;
+          /* Permalink - use to edit and share this gradient: htt/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+64 */
+          background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 64%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 64%, rgba(255, 255, 255, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 64%, rgba(255, 255, 255, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+        }
+      }
+
+    }
+  }
   .news-item
   {
     overflow: hidden;
@@ -209,10 +254,12 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
 }
 
 .council-members
-{ &>div{
-  display: flex;
-  flex-wrap:wrap ;
-}
+{
+  & > div
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .council-member
   {
     .person-image
@@ -242,4 +289,124 @@ $clrs: ('wine' : $wine, 'green' : $green, 'gray' : $gray);
       }
     }
   }
+}
+
+footer
+{
+  .has-divider
+  {
+    border-color: transparentize(#fff, .8);
+  }
+}
+
+/* Slideshow container */
+.slideshow-container
+{
+  //max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides
+{
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next
+{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 40px 16px;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, .9);
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.6s ease;
+  //border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next
+{
+  right: 0;
+  //border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover
+{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text
+{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot
+{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.carousel-container
+{
+  .active, .dot:hover
+  {
+    background-color: #717171;
+  }
+}
+
+/* Fading animation */
+.fade
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade
+{
+  from
+  {opacity: .4}
+  to
+  {opacity: 1}
+}
+
+@keyframes fade
+{
+  from
+  {opacity: .4}
+  to
+  {opacity: 1}
 }
